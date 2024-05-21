@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { String } from './string.js';
+import { Number } from './number.js';
+import { IsMan } from './isMan.js';
+import { StasObj } from './stasObj.js';
+import { Collegyes } from './collegyes';
+import { FuncHisGirl } from './funcHisGirl.js';
+
 
 function App() {
-  return (
+  const name = 'stas';
+  const age = 27;
+  const gender = true;
+  const stasyan = { id: 1, name: 'Stasyan', age: 27, profession: 'A Frontend Developer' };
+  const collegyes = ['Malinovskiy', 'Matveyenka', 'Karpenko'];
+  const funcHisGirl = () => {
+    const nameGirl = 'Kristina';
+    return nameGirl;
+  }
+
+  return(
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <String name={name} />
+      <Number age={age} />
+      <IsMan gender={gender} />
+      <StasObj stasyan={stasyan} />
+      <Collegyes collegyes={collegyes} />
+      <FuncHisGirl funcHisGirl={funcHisGirl} />
+
     </div>
   );
-}
+};
 
 export default App;
